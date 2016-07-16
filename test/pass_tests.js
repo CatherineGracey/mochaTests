@@ -9,3 +9,20 @@ describe('Mocha', function(){
     expect(tests).to.be.ok;
   });
 });
+
+describe('Tests that pass.', function(){
+  it("True is true.", function(){
+    expect(true).to.be.true;
+  });
+  it("True is truthy.", function(){
+    expect(true).to.be.ok;
+  });
+  it("Strings match strings.", function(){
+    var output = tests.returnSelf("Test string.");
+    expect(output).to.equal("Test string.");
+  });
+  it("Numbers match numbers.", function(){
+    var output = tests.returnSelf(10);
+    expect(output).to.equal(10);
+  });
+});
